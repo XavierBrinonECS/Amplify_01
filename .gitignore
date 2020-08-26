@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# From snowpack
+.build
+build
+web_modules
+node_modules

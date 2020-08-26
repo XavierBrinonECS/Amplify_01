@@ -1,0 +1,10 @@
+* Amplify_01
+Custom auth from with Amplify and React
+
+** Setup and installation
+
+#+NAME: install snowpack
+#+BEGIN_SRC sh
+  npx create-snowpack-app amplyAuth --template @snowpack/app-template-react-typescript
+#+END_SRC
+
