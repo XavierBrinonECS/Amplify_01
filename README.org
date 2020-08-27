@@ -3,8 +3,70 @@ Custom auth from with Amplify and React
 
 ** Setup and installation
 
-#+NAME: install snowpack
+#+NAME: Create a react application using snowpack
 #+BEGIN_SRC sh
   npx create-snowpack-app amplyAuth --template @snowpack/app-template-react-typescript
 #+END_SRC
 
+#+NAME: install and configure amplify
+#+BEGIN_SRC sh
+  npm install -g @aws-amplify/cli
+
+  amplify configure
+#+END_SRC
+
+From the newly created application folder we can initialise amplify
+
+#+NAME: initialise amplify
+#+BEGIN_SRC sh
+  cd amplyAuth
+  amplify init
+#+END_SRC
+
+This will trigger some questions for you to answer 
+#+BEGIN_SRC sh
+  ? Enter a name for the project amplyAuth
+  ? Enter a name for the environment dev
+  ? Choose your default editor: Visual Studio Code
+  ? Choose the type of app that you're building javascript
+  Please tell us about your project
+  ? What javascript framework are you using react
+  ? Source Directory Path:  src
+  ? Distribution Directory Path: build
+  ? Build Command:  npm run build
+  ? Start Command: npm run start
+  Using default provider  awscloudformation
+
+  For more information on AWS Profiles, see:
+  https://docs.aws.amazon.com/cli/latest/userguide/cli-multiple-profiles.html
+
+  ? Do you want to use an AWS profile? Yes
+  ? Please choose the profile you want to use aad
+#+END_SRC
+
+It will then build a stack with basic Role and S3 bucket
+#+BEGIN_SRC sh
+  Adding backend environment dev to AWS Amplify Console app: d38uofkpkygubg
+  ⠴ Initializing project in the cloud...
+
+  CREATE_IN_PROGRESS DeploymentBucket             AWS::S3::Bucket            Thu Aug 27 2020 11:56:24 GMT+0100 (British Summer Time) Resource creation Initiated
+  CREATE_IN_PROGRESS AuthRole                     AWS::IAM::Role             Thu Aug 27 2020 11:56:23 GMT+0100 (British Summer Time) Resource creation Initiated
+  CREATE_IN_PROGRESS UnauthRole                   AWS::IAM::Role             Thu Aug 27 2020 11:56:23 GMT+0100 (British Summer Time) Resource creation Initiated
+  CREATE_IN_PROGRESS AuthRole                     AWS::IAM::Role             Thu Aug 27 2020 11:56:23 GMT+0100 (British Summer Time)                            
+  CREATE_IN_PROGRESS DeploymentBucket             AWS::S3::Bucket            Thu Aug 27 2020 11:56:23 GMT+0100 (British Summer Time)                            
+  CREATE_IN_PROGRESS UnauthRole                   AWS::IAM::Role             Thu Aug 27 2020 11:56:23 GMT+0100 (British Summer Time)                            
+  CREATE_IN_PROGRESS amplify-amplyauth-dev-115618 AWS::CloudFormation::Stack Thu Aug 27 2020 11:56:19 GMT+0100 (British Summer Time) User Initiated             
+  ⠴ Initializing project in the cloud...
+
+  CREATE_COMPLETE DeploymentBucket AWS::S3::Bucket Thu Aug 27 2020 11:56:44 GMT+0100 (British Summer Time) 
+  CREATE_COMPLETE AuthRole         AWS::IAM::Role  Thu Aug 27 2020 11:56:41 GMT+0100 (British Summer Time) 
+  CREATE_COMPLETE UnauthRole       AWS::IAM::Role  Thu Aug 27 2020 11:56:40 GMT+0100 (British Summer Time) 
+  ⠴ Initializing project in the cloud...
+
+  CREATE_COMPLETE amplify-amplyauth-dev-115618 AWS::CloudFormation::Stack Thu Aug 27 2020 11:56:46 GMT+0100 (British Summer Time) 
+  ✔ Successfully created initial AWS cloud resources for deployments.
+  ✔ Initialized provider successfully.
+  Initialized your environment successfully.
+
+  Your project has been successfully initialized and connected to the cloud!
+#+END_SRC
