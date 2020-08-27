@@ -75,4 +75,9 @@
         Your project has been successfully initialized and connected to the cloud!
       #+END_SRC
 
-      
+    *** aws amplify
+      in the project folder still
+      #+NAME: install aws-amplify package
+      #+BEGIN_SRC sh
+        npm i aws-amplify
+      #+END_SRC
