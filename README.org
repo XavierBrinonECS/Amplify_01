@@ -47,37 +47,25 @@
       #+END_SRC
 
       It will then build a stack with basic Role and S3 bucket
-      #+BEGIN_SRC sh
-        Adding backend environment dev to AWS Amplify Console app: d12bepxpe927ur
-        ⠦ Initializing project in the cloud...
-
-        CREATE_IN_PROGRESS DeploymentBucket                 AWS::S3::Bucket            Thu Aug 27 2020 13:33:01 GMT+0100 (British Summer Time) Resource creation Initiated
-        CREATE_IN_PROGRESS AuthRole                         AWS::IAM::Role             Thu Aug 27 2020 13:33:00 GMT+0100 (British Summer Time) Resource creation Initiated
-        CREATE_IN_PROGRESS UnauthRole                       AWS::IAM::Role             Thu Aug 27 2020 13:33:00 GMT+0100 (British Summer Time) Resource creation Initiated
-        CREATE_IN_PROGRESS AuthRole                         AWS::IAM::Role             Thu Aug 27 2020 13:33:00 GMT+0100 (British Summer Time)                            
-        CREATE_IN_PROGRESS DeploymentBucket                 AWS::S3::Bucket            Thu Aug 27 2020 13:33:00 GMT+0100 (British Summer Time)                            
-        CREATE_IN_PROGRESS UnauthRole                       AWS::IAM::Role             Thu Aug 27 2020 13:33:00 GMT+0100 (British Summer Time)                            
-        CREATE_IN_PROGRESS amplify-xbamplifyauth-dev-133255 AWS::CloudFormation::Stack Thu Aug 27 2020 13:32:56 GMT+0100 (British Summer Time) User Initiated             
-        ⠧ Initializing project in the cloud...
-
-        CREATE_COMPLETE AuthRole   AWS::IAM::Role Thu Aug 27 2020 13:33:18 GMT+0100 (British Summer Time) 
-        CREATE_COMPLETE UnauthRole AWS::IAM::Role Thu Aug 27 2020 13:33:17 GMT+0100 (British Summer Time) 
-        ⠇ Initializing project in the cloud...
-
-        CREATE_COMPLETE DeploymentBucket AWS::S3::Bucket Thu Aug 27 2020 13:33:22 GMT+0100 (British Summer Time) 
-        ⠧ Initializing project in the cloud...
-
-        CREATE_COMPLETE amplify-xbamplifyauth-dev-133255 AWS::CloudFormation::Stack Thu Aug 27 2020 13:33:24 GMT+0100 (British Summer Time) 
-        ✔ Successfully created initial AWS cloud resources for deployments.
-        ✔ Initialized provider successfully.
-        Initialized your environment successfully.
-
-        Your project has been successfully initialized and connected to the cloud!
-      #+END_SRC
 
     *** aws amplify
       in the project folder still
       #+NAME: install aws-amplify package
       #+BEGIN_SRC sh
         npm i aws-amplify
+      #+END_SRC
+
+  ** Authentication
+    *** add and configure package
+      +NAME: install aws-amplify package
+      #+BEGIN_SRC sh
+        amplify add auth
+      #+END_SRC
+
+      We choose default configuration
+      and username for sign in.
+
+      +NAME: build the local config into the clound
+      #+BEGIN_SRC sh
+        amplify push
       #+END_SRC
