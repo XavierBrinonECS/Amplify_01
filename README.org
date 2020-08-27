@@ -2,12 +2,14 @@
 Custom auth from with Amplify and React
 
 ** Setup and installation
-
+*** snowpack
 #+NAME: Create a react application using snowpack
 #+BEGIN_SRC sh
-  npx create-snowpack-app amplyAuth --template @snowpack/app-template-react-typescript
+  npx create-snowpack-app xb-amplify-auth --template @snowpack/app-template-react-typescript
 #+END_SRC
 
+*** amplify
+If you don't have amplify yet
 #+NAME: install and configure amplify
 #+BEGIN_SRC sh
   npm install -g @aws-amplify/cli
