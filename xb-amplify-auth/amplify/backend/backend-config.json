@@ -1,1 +1,10 @@
-{}
+{
+	"auth": {
+		"xbamplifyauth2b40ad40": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}

@@ -49,3 +49,9 @@
       #+BEGIN_SRC sh
         amplify push
       #+END_SRC
+
+    *** Apply config in React app 
+      #+NAME set up front-end 
+      #+BEGIN_SRC javascript
+        
+      #+END_SRC

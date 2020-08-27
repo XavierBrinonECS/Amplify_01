@@ -10,6 +10,11 @@
             "StackName": "amplify-xbamplifyauth-dev-145814",
             "StackId": "arn:aws:cloudformation:eu-central-1:088417944319:stack/amplify-xbamplifyauth-dev-145814/5aa20bb0-e86d-11ea-ad63-06247d577dba",
             "AmplifyAppId": "d3mqz1mpmnjisn"
+        },
+        "categories": {
+            "auth": {
+                "xbamplifyauth2b40ad40": {}
+            }
         }
     }
 }
